@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Basic Page</title>
+    <meta charset="UTF-8">
+</head>
+
+<body id="body">
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["apple", "banana", "strawberry", "orange"];
+        let someBanana = fruits.some(myFunction);
+
+        document.getElementById("demo").innerHTML = "Contains a banana is " + someBanana;
+
+        function myFunction(value, index, array) {
+            return value == "banana";
+        }
+    </script>
+
+</body>
+
+</html>

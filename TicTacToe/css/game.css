@@ -1,0 +1,35 @@
+/* This container includes our table and canvas */
+.center-container {
+    width: 608px;
+    margin: 0 auto; /* This centers our container */
+    margin-top: 50px;
+}
+
+/* This sets the formatting for the heading */
+h1 {
+    font-family: "Abril Fatface", serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 300%;
+}
+
+table {
+    border-collapse: collapse; /* This property collapses the table border into 1 border. */
+    border-style: hidden; /* This hides outer borders on the table. */
+}
+
+td {
+    cursor: pointer;
+    border: 4px solid rgba(196, 60, 30, 0.7);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+    filter: contrast(3);
+}
+
+canvas {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
