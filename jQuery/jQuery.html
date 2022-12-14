@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Basic jQuery</title>
+		<meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+    <script>
+        //Checks to see that document is fully loaded before executing
+        $(document).ready(function() {
+            //Adds the following code to the html tag
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <input>\
+                            <span style='display:none;'>Hello there!</span>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            //Selects id "2" and applys css to color it red
+            $("#2").css({"color":"red"});
+            //Selects id "3" and adds onclick function to hide "h1"
+            $("#3").click(function()
+            {
+                $("h1").hide();
+            })
+            //Selects id "1" and adds onclick function to hide "h1"
+            $("#1").click(function()
+            {
+                $("h1").show();
+            })
+            //Selects "input", on focus on it, function to display text from "span" is called
+            $("input").focus(function() {
+                $("span").css('display','inline').fadeOut(3000); //After "span" is displayed, fades out after 3 seconds
+            });
+        });
+    </script>
+</html>
