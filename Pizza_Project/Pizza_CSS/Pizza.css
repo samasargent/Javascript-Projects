@@ -1,16 +1,45 @@
-body {
+html {
     background-color: cadetblue;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: gold;
     text-align: center;
+    font-size: 5vw;
 }
 
 h3, div {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: gold;
+}
+
+img {
+    width: 100px;
+    animation: mymove 5s;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes mymove {
+    from {
+        left: -100vw;
+    }
+    to {
+        left: 0vw;
+    }
 }
 
 #menuBG {
